@@ -2,7 +2,7 @@
 
 %hook UIKBTree
 
-- (BOOL)canFadeOutFromState:(NSInteger)fromState toState:(NSInteger)toState {
+- (BOOL)canFadeOutFromState:(int)fromState toState:(int)toState {
     if ([self.name isEqualToString:@"International-Key"]) {
         if (fromState == 4 && toState == 16)
             return NO;
@@ -16,6 +16,14 @@
 
 - (void)_fadeOutKeyView:(id)view duration:(CGFloat)duration completion:(id)completion {
     %orig(view, duration == 0 ? 0.15 : duration, completion);
+}
+
+%end
+
+%hook UIKBKeyViewAnimatorMonolith
+
+- (BOOL)shouldTransitionKeyView:(id)view fromState:(int)fromState toState:(int)toState {
+    return YES;
 }
 
 %end
