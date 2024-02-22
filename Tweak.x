@@ -14,7 +14,7 @@
 
 %hook UIKBKeyViewAnimator
 
-- (void)_fadeOutKeyView:(id)view duration:(double)duration completion:(id)completion {
+- (void)_fadeOutKeyView:(id)view duration:(CGFloat)duration completion:(id)completion {
     %orig(view, duration == 0 ? 0.15 : duration, completion);
 }
 
