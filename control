@@ -2,10 +2,11 @@ Package: com.ps.smoothkb
 Name: SmoothKB
 Conflicts: org.thebigboss.smoothpop
 Depends: mobilesubstrate, firmware (>= 7.0)
-Version: 1.0
+Version: 1.0.0
 Architecture: iphoneos-arm
 Description: Fade animation across keyboard typing.
 Maintainer: PoomSmart
 Author: PoomSmart
 Section: Tweaks
 Depiction: https://poomsmart.github.io/repo/depictions/smoothkb.html
+SileoDepiction: https://poomsmart.github.io/repo/sileodepictions/smoothkb.json
